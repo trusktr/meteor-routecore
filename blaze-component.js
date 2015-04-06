@@ -31,7 +31,7 @@ function BlazeComponent(component) {
       this._dynamicTmpl = new Iron.DynamicTemplate();
       this._dynamicTmpl.template(component);
       this._dynamicTmpl.data(this.props);
-      this._dynamicTmpl.insert({ el: this.getDOMNode() });
+      this._dynamicTmpl.insert({ el: this.findDOMNode() });
     },
 
     componentWillReceiveProps: function(newProps) {
